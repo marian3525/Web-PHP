@@ -1,0 +1,132 @@
+<html>
+    <head>
+            <!-- character encoding not declared fix-->
+            <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+            <meta content="utf-8" http-equiv="encoding">
+            <link rel="stylesheet" type="text/css" href="home.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap.css">
+            <script src="jquery-3.4.0.min.js"></script>
+            <script src="bootstrap.js"></script>
+            <script src="home.js"></script>
+    </head>
+
+    <body>
+      <div id="user" style="height: 20px;"></div>
+
+      <!-- modal to update an entity -->
+      <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">Update details</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label for="serial">Header1-ID</label>
+                            <input class="form-control" id="header1-id" type="text" placeholder="placeholder" readonly #header1-id>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="model">Header2</label>
+                            <input type="text" class="form-control" id="header2" value="name" #header2>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="power">Header3</label>
+                            <input type="text" class="form-control" id="header3" value="other_name" #header3>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="update-confirm-button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- modal to add an entity -->
+        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Add a new car</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="serial_a">Header1-ID</label>
+                            <input class="form-control" id="header1_a" type="text" placeholder="Name" #header1>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="model_a">Model</label>
+                            <input type="text" class="form-control" id="header2_a" placeholder="Other_name" #header2>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" id="add-entity-confirm-button" class="btn btn-primary" data-dismiss="modal" >Save</button>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <button class="btn btn-primary" id="add-entity-button" data-toggle="modal" data-target="#addModal">Add a new entity</button>
+
+            <!--
+            <div id="filter-column">
+                <div style="display: flex; flex-direction: column;">
+
+                    <div>
+                        Fuel Type:<br>
+                        <input type="checkbox" name="gas">Gas</checkbox><br>
+                        <input type="checkbox" name="petrol">Petrol</checkbox><br>
+                        <input type="checkbox" name="electric">Electric</checkbox><br>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column;">
+                        Price range:
+                        <input type="search" id="price-min" placeholder="min. price">
+                        <input type="search" id="price-max" placeholder="max. price">
+                    </div>
+
+                    <div>
+                        Colour:<br>
+                        <input type="checkbox" name="red" value="Red">Red<br>
+                        <input type="checkbox" name="green" value="Red">Green<br>
+                        <input type="checkbox" name="blue" value="Blue">Blue<br>
+
+                    </div>
+
+                    <div style="display: flex; flex-direction: column;">
+                        Age range:<br>
+                        <input type="search" id="age-min" placeholder="min. age">
+                        <input type="search" id="age-max" placeholder="max. age">
+                    </div>
+
+                    <button class="btn btn-secondary" id="filter-button">Filter</button>
+                    <button class="btn btn-secondary" id="clear-button">Clear filters</button>
+
+                </div>
+              -->
+            </div>
+
+            <div id="entity-list"></div>
+    </body>
+</html>
